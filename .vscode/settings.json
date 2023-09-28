@@ -1,0 +1,29 @@
+{
+    "vue.codeActions.enabled": false,
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#08c9ac",
+        "activityBar.background": "#08c9ac",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#030027",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "commandCenter.border": "#15202b99",
+        "sash.hoverBorder": "#08c9ac",
+        "statusBar.background": "#08c9ac",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#D8F3DC",
+        "statusBarItem.remoteBackground": "#08c9ac",
+        "statusBarItem.remoteForeground": "#15202b",
+        "titleBar.activeBackground": "#08c9ac",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#1B4332",
+        "titleBar.inactiveForeground": "#15202b99"
+    },
+    "cSpell.words": [
+        "Alnafi",
+        "axios",
+        "easypaisa",
+        "Strapi",
+        "Swal"
+    ]
+}
