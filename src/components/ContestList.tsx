@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import ContestPreview from "./ContestPreview";
-import { fetchContests } from "../api-client";
 
 const ContestList = ({ initialContest }) => {
   const [contests, setContests] = useState(initialContest);
@@ -11,11 +10,11 @@ const ContestList = ({ initialContest }) => {
   // }, []);
   return (
     <div className="contest-list">
-      {/* {contests.map((contest: any) => {
+      {contests.map((contest: any) => {
         return (
           <ContestPreview key={contest.id} contest={contest} />
         );
-      })} */}
+      })}
     </div>
   );
 };
