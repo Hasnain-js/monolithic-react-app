@@ -11,9 +11,10 @@ server.set('view engine', 'ejs')
 server.use("/api", apiRouter);
 
 server.use("/", async (require, response) => {
-    const { initialMarkUp } = await serverRender()
+    const { initialMarkUp, initialData } = await serverRender()
     response.render('index', {
-        initialMarkUp: 'loading..',
+        initialMarkUp,
+        initialData
     });
 })
 server.listen(config.PORT, config.HOST, () => {

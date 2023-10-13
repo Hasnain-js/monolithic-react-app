@@ -11,12 +11,12 @@
         "sash.hoverBorder": "#08c9ac",
         "statusBar.background": "#08c9ac",
         "statusBar.foreground": "#15202b",
-        "statusBarItem.hoverBackground": "#D8F3DC",
+        "statusBarItem.hoverBackground": "#02fcd6",
         "statusBarItem.remoteBackground": "#08c9ac",
         "statusBarItem.remoteForeground": "#15202b",
         "titleBar.activeBackground": "#08c9ac",
         "titleBar.activeForeground": "#15202b",
-        "titleBar.inactiveBackground": "#1B4332",
+        "titleBar.inactiveBackground": "#08c9ac",
         "titleBar.inactiveForeground": "#15202b99"
     },
     "cSpell.words": [
