@@ -5,16 +5,16 @@ const router = express.Router();
 router.use(cors())
 router.get('/contests', async (req, res) => {
     const client = await connectClient();
-    const contest = await client.collection('contests').find().project({
+    const contests = await client.collection('contests').find().project({
         id: 1,
         categoryName: 1,
         contestName: 1,
         _id: 0
     }).toArray();
-    res.send({ contest })
+    res.send({ contests })
 })
 
-router.get('/contests/:contestId', async (req, res) => {
+router.get('/contest/:contestId', async (req, res) => {
     const client = await connectClient();
     const contest = await client.collection('contests').findOne({
         id: req.params.contestId

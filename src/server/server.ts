@@ -10,7 +10,7 @@ server.set('view engine', 'ejs')
 
 server.use("/api", apiRouter);
 
-server.use("/", async (require, response) => {
+server.use(["/", "/contest/:contestId"], async (require, response) => {
     const { initialMarkUp, initialData } = await serverRender()
     response.render('index', {
         initialMarkUp,
