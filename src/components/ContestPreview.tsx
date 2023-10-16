@@ -9,10 +9,15 @@ const ContesPreview: React.FC<{
     onClick(contest.id);
   };
   return (
-    <div className="contest-preview link" onClick={handleClick}>
+    <a
+      href={"/contest/" + contest.id}
+      className="contest-preview"
+      style={{ display: "block", textDecoration: 'none' }}
+      onClick={handleClick}
+    >
       <div className="category">{contest.categoryName}</div>
       <div className="contest">{contest.contestName}</div>
-    </div>
+    </a>
   );
 };
 
