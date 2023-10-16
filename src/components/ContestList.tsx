@@ -1,16 +1,26 @@
 import { useEffect, useState } from "react";
-import ContestPreview from "./ContestPreview";
+import * as React from "react";
 
-const ContestList = ({ initialContest, onContestClick }) => {
-  const [contests, setContests] = useState(initialContest);
-  // useEffect(() => {
-  //   fetchContestList().then((contests: any) => {
-  //     setContests(contests);
-  //   });
-  // }, []);
+import ContestPreview from "./ContestPreview";
+import { fetchContestList } from "../api-client";
+
+const ContestList: React.FC<{
+  initialContests: object;
+  onContestClick: Function;
+}> = ({ initialContests, onContestClick }) => {
+  const [contests, setContests] = useState(
+    initialContests ?? [],
+  );
+  useEffect(() => {
+    if (!initialContests) {
+      fetchContestList().then((contests: any) => {
+        setContests(contests);
+      });
+    }
+  }, [initialContests]);
   return (
     <>
-      <h1 className='header'>Naming Contest</h1>
+      <h1 className="header">Naming Contest</h1>
       <div className="contest-list">
         {contests.map((contest: any) => {
           return (
